@@ -35,3 +35,5 @@ Augmentor库是机器学习中训练图像识别的利器。在你有少数样�
 
 
 ### About Contest
+- [Ubiquant Investment](http://106.54.219.67:3838/qli/ubiquant_test/ )
+- [UBIQUANT | 第三届量化联赛第二期报名进行时](https://mp.weixin.qq.com/s?__biz=MzIyODU3MjQ0MQ==&mid=2247484398&idx=1&sn=92af29d805d4fc0ceb3e567a0162b4d3&chksm=e84eaf98df39268e81c64773f6a639f8ff8ecf20d98fd3c11236a7620ed29089300038f8cb42&mpshare=1&scene=1&srcid=&sharer_sharetime=1582286459839&sharer_shareid=aafbb2f47154bfe5f435dd9f37d0d22c&key=0c96e6e07d1ffdfe1a5609055d9b4b862aaec9dc9c19a8cf67ad1dc4669c715f74decbb113b1764a74d9c8927b94fe0e9beaf3507501c7e0865563ec160c91e4fa73faab7224fe02bd0fda23915ff692&ascene=1&uin=MTIyMzg1NDgyMQ%3D%3D&devicetype=Windows+10&version=62080079&lang=zh_CN&exportkey=A6HJjTZu0Ge6iMt6RCT4Q7A%3D&pass_ticket=J7bJb%2BNnZE4OR%2F7qv26LhIBc4xb0C%2FRw%2BdfCiFHCK2Q%2FBeG9BCM%2FAQYfTLdnSqHp )
