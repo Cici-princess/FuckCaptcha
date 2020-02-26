@@ -6,7 +6,7 @@
 # ------------------------------------
 
 from settings import *
-from fuck_img import *
+from captcha_parse import *
 
 import numpy as np
 import cv2

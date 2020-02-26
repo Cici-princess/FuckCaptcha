@@ -6,7 +6,7 @@
 # ------------------------------------
 
 from settings import *
-from fuck_img import *
+from captcha_parse import *
 
 img_path = '0b5df518-4e7b-11ea-9a5f-001a7dda7113_01.jpg'
 

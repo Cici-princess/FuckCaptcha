@@ -1,5 +1,15 @@
 # FuckCaptcha
 
+## Project Overview
+```text
+├─captcha_gen       # 生成验证码
+│  └─SavedCaptcha       # 验证码存储文件夹
+├─captcha_parse     # 解析验证码
+├─CNN_Keras         # CNN训练模型，需要Tensorflow 1
+├─references        # 参考
+├─src               # 比赛的数据集
+```
+
 
 ### OSTU
 - [Python-Pillow-OTSU算法_Python_valueerror404_gumoo的博客-CSDN博客](https://blog.csdn.net/weixin_45088342/article/details/90318580 )
