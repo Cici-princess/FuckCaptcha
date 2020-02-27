@@ -95,41 +95,61 @@ class OurCaptcha:
         self.img_width  = IMG_WIDTH
         self.img_height = IMG_HEIGHT
         self.img_mode   = IMG_MODE
-        self.image      = Image.new(self.img_mode, (self.img_width, self.img_height))  # 创建一张新图片
-        self.image_draw = ImageDraw.Draw(self.image)  # 创建绘图工具
+        self.img        = Image.new(self.img_mode, (self.img_width, self.img_height))  # 创建一张新图片
+        self.img_draw   = ImageDraw.Draw(self.img)  # 创建绘图工具
         self.img_path   = None
 
     def _draw_bg(self):
-        for i in range(self.image.size[0]):
-            for j in range(self.image.size[1]):
-                self.image_draw.point((i, j), gen_random_bg_color())
+        logging.debug("Initializing the background color...")
+        for i in range(self.img.size[0]):
+            for j in range(self.img.size[1]):
+                self.img_draw.point((i, j), gen_random_bg_color())
 
     def _draw_fg(self):
+        logging.debug("Initializing the foreground text...")
         for char_seq in range(self.char_cnt):
             char_font    = use_random_font()
             char_color   = gen_random_fg_color()
             char_x       = int(self.img_width / (self.char_cnt + 1) * (char_seq + 0.5))
             char_y       = random.randint(int(self.img_height/5), int(self.img_height/3))
-            self.image_draw.text((char_x, char_y), self.char_text[char_seq], char_color, char_font)
+            self.img_draw.text((char_x, char_y), self.char_text[char_seq], char_color, char_font)
         
     def _add_noise(self):
-        # TODO: 加入干扰线
-      self.image.filter(ImageFilter.BLUR)   # 模糊处理
+        logging.debug("Adding some preset noises...")
+        self._add_line(line_cnt=3)
+        self.img.filter(ImageFilter.BLUR)   # 模糊处理
+
+
+    def _add_line(self, line_cnt=3, joint="curve"):
+        """
+        (x_0, y_0): 线条的起始点坐标
+        (x_1, y_1): 线条的终止点坐标
+        l_l：线条的长度
+        l_w: 线条的宽度
+        joint: 线条是直线还是曲线
+        :param line_cnt:
+        :return:
+        """
+        for i in range(line_cnt):
+            x_0 = random.randint(0, int(self.img_width/3))
+            y_0 = random.randint(int(self.img_height/3), int(self.img_height/3*2))
+            l_l = random.randint(int(self.img_width/2), int(self.img_width))
+            l_w = random.randint(1, 3)
+            x_1 = x_0 + l_l
+            y_1 = y_0 + random.randint(-int(self.img_height/3), int(self.img_height/3))
+            self.img_draw.line(((x_0, y_0), (x_1, y_1)), fill=gen_random_bg_color(), width=l_w, joint=joint)
 
     def create_image(self):
-        logging.debug("Creating one image...")
-        logging.debug("Initializing the background color...")
-        self._draw_bg()
-        logging.debug("Initializing the foreground text...")
-        self._draw_fg()
-        logging.debug("Adding some preset noises...")
-        self._add_noise()
+            logging.debug("Creating one image...")
+            self._draw_bg()
+            self._draw_fg()
+            self._add_noise()
         
     def show_image(self):
         logging.debug("Showing the image, "
                       "please close the image viewer "
                       "before continuing to the following procedures if necessary.")
-        self.image.show()
+        self.img.show()
 
     def save_image(self, file_name=None, file_dir_path=None):
         if not file_dir_path:
@@ -139,7 +159,7 @@ class OurCaptcha:
         if not file_name:
             file_name = "{}.jpg".format(int(time.time()))
         self.img_path = os.path.abspath(os.path.join(file_dir_path, file_name))
-        self.image.save(self.img_path)
+        self.img.save(self.img_path)
         logging.debug("Successfully saved image to path {}".format(self.img_path))
 
     @property
