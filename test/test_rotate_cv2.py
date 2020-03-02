@@ -26,7 +26,7 @@ rotated_img = cv2.warpPerspective(img, M, (w, h))       # directly warp the rota
 
 def main():
     img = cv2.imread("big_vertical_text.jpg")
-    # points for test.jpg
+    # points for run_testing.jpg
     contour = np.array([
             [[64, 49]],
             [[122, 11]],

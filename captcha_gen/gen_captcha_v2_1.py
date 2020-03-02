@@ -133,6 +133,8 @@ class ImageHandle:
         :param line_cnt:
         :return:
         """
+        # TODO: 替换成rot_img函数
+
         for i in range(line_cnt):
             x_0 = random.randint(0, int(self.img_width/3))
             y_0 = random.randint(int(self.img_height/3), int(self.img_height/3*2))
@@ -159,6 +161,8 @@ class ImageHandle:
 
         # 创建扭曲
         self.img = self.img.transform(self.img.size, Image.PERSPECTIVE, params)
+
+
 
         return self
 
