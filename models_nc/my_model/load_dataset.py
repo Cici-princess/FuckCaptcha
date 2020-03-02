@@ -29,7 +29,7 @@ EPOCH = 3
 TRAIN_BATCH_SIZE = 64
 NUM_WORKER = 1
 
-from settings import *
+from general import *
 from pytorch.model.train import MarkNet
 
 

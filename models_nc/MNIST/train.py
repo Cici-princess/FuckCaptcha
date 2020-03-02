@@ -28,7 +28,7 @@ TRANSFORM = transforms.Compose([
 ])
 
 
-from settings import *
+from general import *
 
 DATA_DIR   = DATA_DIR
 MODEL_PATH = os.path.join(DATA_DIR, "MNIST", "model.pt")

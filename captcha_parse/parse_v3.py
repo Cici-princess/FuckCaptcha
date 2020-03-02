@@ -5,7 +5,7 @@
 # @Email        : shawninjuly@gmai.com
 # ------------------------------------
 
-from settings import *
+from general import *
 from models_nc.MNIST.train import *
 import torchvision.transforms as trans
 

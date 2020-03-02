@@ -5,7 +5,7 @@
 # @Email        : shawninjuly@gmai.com
 # ------------------------------------
 
-from settings import *
+from general import *
 
 def pipe_img(img, funcs):
 	def standard_img(img):

@@ -308,7 +308,7 @@ def main():
 
     print('Saving data to \'' + opt.save_data + '.train.pt\'...')
     save_data = {
-        'dicts': dicts,
+        'vocabularies': dicts,
         'type': opt.src_type,
         'train': train,
         'valid': valid

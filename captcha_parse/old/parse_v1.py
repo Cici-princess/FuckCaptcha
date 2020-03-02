@@ -1,4 +1,4 @@
-from settings import *
+from general import *
 logging.getLogger('matplotlib.font_manager').setLevel(logging.INFO)
 
 import matplotlib.pyplot as plt

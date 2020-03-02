@@ -5,7 +5,7 @@
 # @Email        : shawninjuly@gmai.com
 # ------------------------------------
 
-from settings import *
+from general import *
 from pytorch.model.verify import *
 logging.getLogger('matplotlib.font_manager').setLevel(logging.INFO)
 

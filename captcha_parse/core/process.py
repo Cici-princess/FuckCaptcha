@@ -5,7 +5,7 @@
 # @Email        : shawninjuly@gmai.com
 # ------------------------------------
 
-from settings import *
+from general import *
 from captcha_parse import *
 
 import numpy as np

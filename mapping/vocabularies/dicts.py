@@ -4,7 +4,7 @@
 # @Author       : Mark Shawn
 # @Email        : shawninjuly@gmai.com
 # ------------------------------------
-from settings import *
+from general import *
 
 import difflib
 

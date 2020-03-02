@@ -9,7 +9,7 @@ from pytorch.model.train import MarkNet
 [pytorch用LeNet5识别Mnist手写体数据集(训练+预测单张输入图片代码)_人工智能_ZJE-CSDN博客](https://blog.csdn.net/u014453898/article/details/90707987 )
 """
 
-from settings import *
+from general import *
 
 import torch
 import torch.nn.functional as F

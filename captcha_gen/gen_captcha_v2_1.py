@@ -18,7 +18,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logging.getLogger("matplotlib.font_manager").setLevel(logging.INFO)
 
-from settings import *
+from general import *
 IMG_SAVE_DIR = os.path.join(DATA_DIR, "captcha_gen_v2")
 os.makedirs(IMG_SAVE_DIR, exist_ok=True)
 

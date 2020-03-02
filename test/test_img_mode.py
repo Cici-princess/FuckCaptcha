@@ -5,7 +5,7 @@
 # @Email        : shawninjuly@gmai.com
 # ------------------------------------
 
-from settings import *
+from general import *
 from PIL import Image
 
 img_path = r'F:\MyProjects\PycharmProjects\FuckCaptcha\src\captcha_img_data_renamed_v2_output\Type_1\0_0_0.jpg'

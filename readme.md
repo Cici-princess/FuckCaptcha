@@ -3,11 +3,16 @@
 ## Project Overview
 ```text
 ├─captcha_gen       # 生成验证码
-│  └─SavedCaptcha       # 验证码存储文件夹
 ├─captcha_parse     # 解析验证码
-├─CNN_Keras         # CNN训练模型，需要Tensorflow 1.13
-├─references        # 参考
+├─mapping           # 一些字典表
+├─models_nc         # 南川的模型
+│  ├─MNIST          # 使用pytorch跑的官方MNIST数据集
+│  ├─Lets_OCR       # 使用pytorch跑的CRNN模型（端到端）
+├─models_zkj        # 科神的模型
 ├─src               # 比赛的数据集
+├─references        # 参考
+├─test              # 一些通用测试文件      
+├─general.py       # 一些通用函数
 ```
 
 
@@ -29,7 +34,7 @@ Augmentor库是机器学习中训练图像识别的利器。在你有少数样�
 
 
 ### References
-#### OSTU
+#### OTSU
 - [Python-Pillow-OTSU算法_Python_valueerror404_gumoo的博客-CSDN博客](https://blog.csdn.net/weixin_45088342/article/details/90318580 )
 - [阈值化分割（二）OTSU法-附Python实现_Python_sylvester的博客-CSDN博客](https://blog.csdn.net/u010128736/article/details/52801310?utm_source=distribute.pc_relevant.none-task )
 
@@ -41,7 +46,7 @@ Augmentor库是机器学习中训练图像识别的利器。在你有少数样�
 
 
 #### Local pdf
-- F:\MyProjects\PycharmProjects\FuckCaptcha\references\验证码识别技术分析.pdf
+- `references/验证码识别技术分析.pdf`
 
 
 ### About Contest
